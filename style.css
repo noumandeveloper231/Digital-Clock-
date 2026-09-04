@@ -1,0 +1,99 @@
+/* Linkings google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 2s linear;
+}
+
+/* Time shape sun/moon */
+
+#time-shape{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+/* Main digital clock container */
+
+#digital-clock{
+    width: 50vw;
+    height: clamp(10rem , 25vh , 15rem);
+    background-color: black;
+    color: white;
+    border-radius: 0.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 10px 50px grey;
+}
+
+/* Digital clock wrapper */
+
+#digital-clock-wrapper{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-text-stroke: 1px red;
+    text-shadow: 5px 5px 30xp red;
+    padding-left: 10px;
+    font-size: 5vw;
+    height: 100%;
+}
+
+/* Extra details (indicators , Milliseconds) */
+
+#extra-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    padding: 1rem;
+}
+
+/* Milisec */
+
+#mili-sec{
+    font-size: 1.5vw;
+    color: red;
+}
+
+/* Time indcators */
+#indicators{
+    color: yellow;
+    font-size: 2vw;
+}
+
+/* Now let's make it responsive enough */
+
+@media screen and (max-width: 768px) {
+    #digtial-clock-wrapper{
+        -webkit-text-stroke: 0.5px red;
+    }
+
+    #digital-clock{
+        width: 65vw;
+        height: 20vh;
+    }
+
+    #time-shape{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
